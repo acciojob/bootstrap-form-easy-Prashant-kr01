@@ -7,36 +7,43 @@
 </head>
 
 <body>
-	<h1 >Internship Form</h1>
 	<form>
-		<label for="first-name-input">First Name</label>
-		<input ="text" id="first-name-input" required >
+ 
+      <label for="first-name-input">First name</label>
+      <input type="text" class="form-control is-valid" id="first-name-input" placeholder="First name" value="" required>
+     
+      <label for="last-name-input">Last name</label>
+      <input type="text" class="form-control is-valid" id="last-name-input" placeholder="Last name" value="" required>
 		
-		<label for="last-name-input">Last Name</label>
-		<input ="text" id="last-name-input" required>
-		
-		<label for="email-input">Email Address</label>
-		<input ="email" id="email-input" required>
-		
+      <label for="email-input">Email</label>
+      <input type="email" class="form-control is-invalid" id="email-input" placeholder="xyz@abc.com" required><br>
+
 		<label for="college-input">College</label>
-		<input ="text" id="college-input" required>
+		<input type="text" id="college-input"required>
 
-		<label for="year" required>Graduation Year</label>
-		<select id="year">
-			<option>2020</option>
-			<option>2021</option>
-			<option>2022</option>
-			<option>2023</option>
-		</select>
+		<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Graduation Year</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>Choose...</option>
+    <option value="1">2020</option>
+    <option value="2">2021</option>
+    <option value="3">2022</option>
+	<option value="3">2023</option>
+  </select>
+
+		<label for="roll-no-input">Roll No.</label>
+		<input type="number" id="roll-no-input" required><br>
 		
-		<label for="roll-no-input">Submit</label>
-		<input type="text" id="roll-no-input"><br>
-
-		<label for="conditions-checkbox">Agree to terms and conditions</label>
-		<input type="checkbox" id="conditions-checkbox"><br>
-        <label for="submit">Submit button</label>
-		<input type="submit" id="submit">
-	</form>
+      <input class="form-check-input is-invalid" type="checkbox" value="" id="conditions-checkbox" required>
+      <label class="form-check-label" for="conditions-checkbox">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
